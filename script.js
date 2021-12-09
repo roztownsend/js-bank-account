@@ -1,6 +1,6 @@
 // BANK ACCOUNT
 
-/* As required by the directions in the starter code for this file: parseFloat() is required for deposit/withdrawal functions because the user input will need to be converted to a floating point number. Likewise, parseInt in the atm function parses user input into integers. */
+// As required by the directions in the starter code for this file: parseFloat() is required for deposit/withdrawal functions because the user input will need to be converted to a floating point number. Likewise, parseInt in the atm function parses user input into integers.
 
 // Object, properties and functions/methods:
 
@@ -52,7 +52,7 @@ function atm() {
   4. Get account holder name
   5. Exit`));
 
-  /* Re: Point 2 of the readme file: I decided to use switch instead of an if-then because my understanding is that switch statements are used to test the value of a given variable - I took the parseInt function given to us as a hint that we would be testing number values here, as opposed to booleans. Note for the atm function reload I did the if statement. */
+  // Re: Point 2 of the readme file: I decided to use switch instead of an if-then because my understanding is that switch statements are used to test the value of a given variable - I took the parseInt function given to us as a hint that we would be testing number values here, as opposed to booleans. Note for the atm function reload I did the if statement.
 
   //Switch case for prompts:
 
@@ -74,9 +74,11 @@ function atm() {
       break;
     default:
       account.accountError();
+      atm();
       break;
   }
 
+  //Is there a way to add the default switch case to the if-then statement here? I know calling the atm function again like that in default is breaking DRY...
 
   if (choice < 5) {
     atm();
